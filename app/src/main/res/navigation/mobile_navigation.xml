@@ -34,6 +34,11 @@
         android:name="com.afsal.dev.typicodapp.ui.albums.PhotosFragment"
         android:label="@string/title_photos"
         tools:layout="@layout/fragment_photos" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.afsal.dev.typicodapp.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" />
 
 
 </navigation>

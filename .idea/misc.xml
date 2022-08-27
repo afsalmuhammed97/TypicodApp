@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/TypicodApp/app/src/main/res/drawable/ic_baseline_light_mode_24.xml" value="0.2075" />
         <entry key="..\:/TypicodApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/TypicodApp/app/src/main/res/layout/album_item.xml" value="0.19583333333333333" />
         <entry key="..\:/TypicodApp/app/src/main/res/layout/comments_item.xml" value="0.2" />
@@ -12,9 +13,11 @@
         <entry key="..\:/TypicodApp/app/src/main/res/layout/fragment_dashboard.xml" value="0.19583333333333333" />
         <entry key="..\:/TypicodApp/app/src/main/res/layout/fragment_home.xml" value="0.19583333333333333" />
         <entry key="..\:/TypicodApp/app/src/main/res/layout/fragment_photos.xml" value="0.1" />
+        <entry key="..\:/TypicodApp/app/src/main/res/layout/fragment_settings.xml" value="0.33" />
         <entry key="..\:/TypicodApp/app/src/main/res/layout/photos_item_layout.xml" value="0.2" />
         <entry key="..\:/TypicodApp/app/src/main/res/layout/post_item.xml" value="0.19479166666666667" />
         <entry key="..\:/TypicodApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.19583333333333333" />
+        <entry key="..\:/TypicodApp/app/src/main/res/menu/settings_menu.xml" value="0.1" />
       </map>
     </option>
   </component>

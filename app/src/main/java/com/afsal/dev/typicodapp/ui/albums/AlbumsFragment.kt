@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.afsal.dev.typicodapp.R
 import com.afsal.dev.typicodapp.adapters.AlbumAdapter
 import com.afsal.dev.typicodapp.databinding.FragmentAlbumBinding
 import com.afsal.dev.typicodapp.netWork.Resource
@@ -47,7 +49,8 @@ class AlbumsFragment : Fragment() {
 
         albumAdapter = AlbumAdapter() {
 
-            //homeViewModel.getPhotosOnAlbum(it)
+            homeViewModel.getPhotosOnAlbum(it)
+            navigateToPhotos()
 
             Log.d(TAG, "Clicked id $it")
         }
@@ -66,11 +69,15 @@ class AlbumsFragment : Fragment() {
 
             when (it) {
                 is Resource.Success -> {
+
+                    binding.progressBar2.visibility=View.GONE
                     val data = it.value.body()!!
                     albumAdapter.differ.submitList(data)
+
                 }
 
                 is Resource.Failure -> {
+                    binding.progressBar2.visibility=View.VISIBLE
                     handleApiError(it)
                 }
 
@@ -81,5 +88,10 @@ class AlbumsFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+
+    private fun navigateToPhotos(){
+        findNavController().navigate(R.id.action_navigation_albums_to_photosFragment)
     }
 }

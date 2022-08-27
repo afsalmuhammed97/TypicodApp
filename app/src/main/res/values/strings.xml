@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">Typicod App</string>
     <string name="title_home">Home</string>
+    <string name="title_album">Albums</string>
+    <string name="title_photos">Photos</string>
+    <string name="title_comments">Comments</string>
+
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="albums">albums</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

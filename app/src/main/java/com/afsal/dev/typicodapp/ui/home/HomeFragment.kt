@@ -53,11 +53,15 @@ class HomeFragment : Fragment() {
 
             when(it){
                 is Resource.Success ->{
+                    binding.progressBar.visibility=View.GONE
+
                     val data=it.value.body()!!
                     postesAdapter.differ.submitList(data)
                 }
 
                 is Resource.Failure ->{
+
+                    binding.progressBar.visibility=View.VISIBLE
                    handleApiError(it)
                 }
 

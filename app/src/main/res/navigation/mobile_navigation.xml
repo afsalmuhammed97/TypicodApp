@@ -18,13 +18,22 @@
     <fragment
         android:id="@+id/navigation_albums"
         android:name="com.afsal.dev.typicodapp.ui.albums.AlbumsFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_album" />
+        android:label="@string/title_album"
+        tools:layout="@layout/fragment_album" >
+        <action
+            android:id="@+id/action_navigation_albums_to_photosFragment"
+            app:destination="@id/photosFragment" />
+    </fragment>
     <dialog
         android:id="@+id/commentSheetFragment"
         android:name="com.afsal.dev.typicodapp.ui.home.CommentSheetFragment"
-        android:label="fragment_comments"
+        android:label="@string/title_comments"
         tools:layout="@layout/fragment_comments" />
+    <fragment
+        android:id="@+id/photosFragment"
+        android:name="com.afsal.dev.typicodapp.ui.albums.PhotosFragment"
+        android:label="@string/title_photos"
+        tools:layout="@layout/fragment_photos" />
 
 
 </navigation>

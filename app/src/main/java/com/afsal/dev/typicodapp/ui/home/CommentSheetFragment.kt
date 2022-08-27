@@ -31,7 +31,7 @@ class CommentSheetFragment : BottomSheetDialogFragment() {
     ): View {
 
 
-            homeViewModel = ViewModelProvider(requireActivity())[HomeViewModel::class.java]
+        homeViewModel = ViewModelProvider(requireActivity())[HomeViewModel::class.java]
 
         _binding = FragmentCommentsBinding.inflate(inflater, container, false)
 
@@ -42,7 +42,7 @@ class CommentSheetFragment : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-          commentsAdapter=CommentsAdapter()
+        commentsAdapter = CommentsAdapter()
 
         binding.commentsRv.apply {
             layoutManager = LinearLayoutManager(context)
@@ -52,13 +52,18 @@ class CommentSheetFragment : BottomSheetDialogFragment() {
         homeViewModel.commentList.observe(viewLifecycleOwner, Observer {
 
 
-            when(it){
-                is Resource.Success ->{
-                    val data=it.value.body()!!
+            when (it) {
+                is Resource.Success -> {
+
+                    binding.progressBar4.visibility = View.GONE
+
+                    val data = it.value.body()!!
                     commentsAdapter.differ.submitList(data)
                 }
 
-                is Resource.Failure ->{
+                is Resource.Failure -> {
+                    binding.progressBar4.visibility = View.VISIBLE
+
                     handleApiError(it)
                 }
 

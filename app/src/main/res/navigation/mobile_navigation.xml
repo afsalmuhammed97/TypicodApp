@@ -9,13 +9,22 @@
         android:id="@+id/navigation_home"
         android:name="com.afsal.dev.typicodapp.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_commentSheetFragment"
+            app:destination="@id/commentSheetFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_albums"
         android:name="com.afsal.dev.typicodapp.ui.albums.AlbumsFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_album" />
+    <dialog
+        android:id="@+id/commentSheetFragment"
+        android:name="com.afsal.dev.typicodapp.ui.home.CommentSheetFragment"
+        android:label="fragment_comments"
+        tools:layout="@layout/fragment_comments" />
 
 
 </navigation>

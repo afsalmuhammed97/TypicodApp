@@ -1,0 +1,1 @@
+package com.afsal.dev.typicodapp.modeldata class PostesItem(    val body: String,    val id: Int,    val title: String,    val userId: Int)

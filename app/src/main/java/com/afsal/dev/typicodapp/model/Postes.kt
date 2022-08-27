@@ -1,0 +1,1 @@
+package com.afsal.dev.typicodapp.modelclass Postes : ArrayList<PostesItem>()

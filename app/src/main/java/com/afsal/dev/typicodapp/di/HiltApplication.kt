@@ -1,0 +1,1 @@
+package com.afsal.dev.typicodapp.diimport android.app.Applicationimport dagger.hilt.android.HiltAndroidApp@HiltAndroidAppclass HiltApplication:Application() {}
